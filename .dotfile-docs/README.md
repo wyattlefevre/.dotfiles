@@ -9,3 +9,10 @@ alias config='/usr/bin/git --git-dir=/.dotfiles/ --work-tree=$HOME'
 config config --local status.showUntrackedFiles no
 config checkout
 ```
+
+A useful command for staging all changes (but no other files) is
+
+
+```bash
+config add -u
+```
