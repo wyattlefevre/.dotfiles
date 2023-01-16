@@ -73,7 +73,7 @@ ZSH_THEME="philips"
 plugins=(git)
 
 source $ZSH/oh-my-zsh.sh
-source "./.zsh/aliases/base.sh"
+source ~/.zsh/aliases/base.sh
 
 # User configuration
 

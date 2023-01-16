@@ -2,8 +2,7 @@
 # TODO: goodmorning script notifies if there are unsaved changes in this repo
 alias vim='nvim'
 alias lg='lazygit'
-alias ls='ls -a1 --color=auto'
-alias lsl='ls -al --color=auto'
+alias ls='ls -a | pr -t -3'
 alias python='python3'
 
 # tools
@@ -29,8 +28,8 @@ function kdo() {
 export EDITOR=nvim
 
 # sources
-source ./neighbor.sh
-source ./qmk.sh
-source ./docker.sh
+source ~/.zsh/aliases/qmk.sh
+source ~/.zsh/aliases/neighbor.sh
+source ~/.zsh/aliases/docker.sh
 
 export PATH="/Users/wyatt/.local/bin:$PATH"
