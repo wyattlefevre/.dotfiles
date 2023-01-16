@@ -5,6 +5,7 @@ alias lg='lazygit'
 alias ls='ls -a | pr -t -3'
 alias python='python3'
 alias restart-awesome="echo 'awesome.restart()' | awesome-client"
+alias restart-tmux="tmux kill-server"
 
 # tools
 alias notifyDone='terminal-notifier -title "Terminal" -message "Done with task! Exit status: $?"' -activate com.apple.Terminal
