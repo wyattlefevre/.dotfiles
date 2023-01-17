@@ -187,7 +187,7 @@ awful.screen.connect_for_each_screen(function(s)
     set_wallpaper(s)
 
     -- Each screen has its own tag table.
-    awful.tag({ "1", "2", "3", "4", "5", "6", "7", "8", "9" }, s, awful.layout.layouts[1])
+    awful.tag({ "1", "2", "3", "4", "5", "6", "7", "8" }, s, awful.layout.layouts[1])
 
     -- Create a promptbox for each screen
     s.mypromptbox = awful.widget.prompt()
@@ -256,13 +256,13 @@ globalkeys = gears.table.join(
     awful.key({ modkey,           }, "Escape", awful.tag.history.restore,
               {description = "go back", group = "tag"}),
 
-    awful.key({ modkey,           }, "j",
+    awful.key({ modkey,           }, "u",
         function ()
             awful.client.focus.byidx( 1)
         end,
         {description = "focus next by index", group = "client"}
     ),
-    awful.key({ modkey,           }, "k",
+    awful.key({ modkey,           }, "i",
         function ()
             awful.client.focus.byidx(-1)
         end,
@@ -329,8 +329,8 @@ globalkeys = gears.table.join(
               {description = "restore minimized", group = "client"}),
 
     -- Prompt
-    awful.key({ modkey },            "r",     function () awful.screen.focused().mypromptbox:run() end,
-              {description = "run prompt", group = "launcher"}),
+    awful.key({ modkey },            "r",     function () awful.util.spawn("dmenu_run") end,
+              {description = "runs dmenu_run", group = "launcher"}),
 
     awful.key({ modkey }, "x",
               function ()
@@ -392,12 +392,23 @@ clientkeys = gears.table.join(
 )
 
 -- Bind all key numbers to tags.
--- Be careful: we use keycodes to make it work on any keyboard layout.
+-- Be careful: we use keycodes to make it work on any keyboard layout
 -- This should map on the top row of your keyboard, usually 1 to 9.
+local tagMap = {
+  [1] = "j",
+  [2] = "k",
+  [3] = "l",
+  [4] = ";",
+  [5] = "m",
+  [6] = ",",
+  [7] = ".",
+  [8] = "/"
+}
+
 for i = 1, 9 do
     globalkeys = gears.table.join(globalkeys,
         -- View tag only.
-        awful.key({ modkey }, "#" .. i + 9,
+        awful.key({ modkey }, tagMap[i],
                   function ()
                         local screen = awful.screen.focused()
                         local tag = screen.tags[i]
@@ -407,7 +418,7 @@ for i = 1, 9 do
                   end,
                   {description = "view tag #"..i, group = "tag"}),
         -- Toggle tag display.
-        awful.key({ modkey, "Control" }, "#" .. i + 9,
+        awful.key({ modkey, "Control" }, tagMap[i],
                   function ()
                       local screen = awful.screen.focused()
                       local tag = screen.tags[i]
@@ -417,7 +428,7 @@ for i = 1, 9 do
                   end,
                   {description = "toggle tag #" .. i, group = "tag"}),
         -- Move client to tag.
-        awful.key({ modkey, "Shift" }, "#" .. i + 9,
+        awful.key({ modkey, "Shift" }, tagMap[i],
                   function ()
                       if client.focus then
                           local tag = client.focus.screen.tags[i]
@@ -428,7 +439,7 @@ for i = 1, 9 do
                   end,
                   {description = "move focused client to tag #"..i, group = "tag"}),
         -- Toggle tag on focused client.
-        awful.key({ modkey, "Control", "Shift" }, "#" .. i + 9,
+        awful.key({ modkey, "Control", "Shift" }, tagMap[i],
                   function ()
                       if client.focus then
                           local tag = client.focus.screen.tags[i]
