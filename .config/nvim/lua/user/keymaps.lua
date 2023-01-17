@@ -65,8 +65,8 @@ keymap("n", "<leader>j", "10<C-e>", opts)
 keymap("n", "<leader>k", "10<C-y>", opts)
 
 -- Move text up and down
-keymap("n", "∆", "<Esc>:m .+1<CR>==", opts)
-keymap("n", "˚", "<Esc>:m .-2<CR>==", opts)
+keymap("n", "<A-j>", "<Esc>:m .+1<CR>==", opts)
+keymap("n", "<A-k>", "<Esc>:m .-2<CR>==", opts)
 
 -- Easier line navigation
 keymap("n", "<leader>h", "^", opts)
@@ -92,8 +92,8 @@ keymap("v", "<", "<gv", opts)
 keymap("v", ">", ">gv", opts)
 
 -- Move text up and down
-keymap("v", "∆", ":m .+1<CR>==", opts) -- configured for MacOS
-keymap("v", "˚", ":m .-2<CR>==", opts) -- configured for MacOS
+keymap("v", "<A-j>", ":m .+1<CR>==", opts) -- configured for MacOS
+keymap("v", "<A-k>", ":m .-2<CR>==", opts) -- configured for MacOS
 keymap("v", "p", '"_dP', opts)
 
 -- Visual Block --
