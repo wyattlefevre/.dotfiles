@@ -393,7 +393,7 @@ clientkeys = gears.table.join(
 
 -- Bind all key numbers to tags.
 -- Be careful: we use keycodes to make it work on any keyboard layout
--- This should map on the top row of your keyboard, usually 1 to 9.
+-- This should map on the top row of your keyboard, usually 1 to 8.
 local tagMap = {
   [1] = "j",
   [2] = "k",
@@ -405,7 +405,7 @@ local tagMap = {
   [8] = "/"
 }
 
-for i = 1, 9 do
+for i = 1, 8 do
     globalkeys = gears.table.join(globalkeys,
         -- View tag only.
         awful.key({ modkey }, tagMap[i],
@@ -519,7 +519,7 @@ awful.rules.rules = {
 
     -- Add titlebars to normal clients and dialogs
     { rule_any = {type = { "normal", "dialog" }
-      }, properties = { titlebars_enabled = true }
+      }, properties = { titlebars_enabled = false }
     },
 
     -- Set Firefox to always map on the tag named "2" on screen 1.
