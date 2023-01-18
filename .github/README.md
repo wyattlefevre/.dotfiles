@@ -12,4 +12,8 @@ git clone --bare git@github.com:wyattlefevre/.dotfiles.git $HOME/.dotfiles
 alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
 config checkout
 ```
+## Only track files in repo
 
+```bash 
+config config --local status.showUntrackedFiles no
+```
