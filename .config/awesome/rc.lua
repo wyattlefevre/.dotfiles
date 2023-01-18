@@ -597,3 +597,4 @@ end
 
 beautiful.useless_gap = 4
 beautiful.gap_single_client = true
+awful.screen.set_auto_dpi_enabled(true)
