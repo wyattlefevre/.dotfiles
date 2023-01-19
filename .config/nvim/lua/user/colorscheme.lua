@@ -1,4 +1,4 @@
-local colorscheme = "tokyonight"
+local colorscheme = "onehalfdark"
 
 local function setHighlights(bg, c, b)
   bg = bg or "dark"
@@ -54,7 +54,7 @@ local function applyColorscheme(nickName)
 end
 
 applyColorscheme(colorscheme)
--- vim.cmd([[hi Normal guibg=NONE ctermbg=NONE]]) -- set background to inherit from terminal
+vim.cmd([[hi Normal guibg=NONE ctermbg=NONE]]) -- set background to inherit from terminal
 -- vim.cmd([[hi CursorLine ctermbg=0 guibg=#000000]]) -- sets highlight line to black. makes it easier to read hint text
 
 -- Favorite themes:
