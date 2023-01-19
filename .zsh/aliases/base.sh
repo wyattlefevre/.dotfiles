@@ -7,6 +7,7 @@ alias python='python3'
 alias restart-awesome="echo 'awesome.restart()' | awesome-client"
 alias restart-tmux="tmux kill-server"
 alias config='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
+alias wp='nitrogen --restore'
 
 if command -v tmux &> /dev/null && [ -n "$PS1" ] && [[ ! "$TERM" =~ screen ]] && [[ ! "$TERM" =~ tmux ]] && [ -z "$TMUX" ]; then
   exec tmux
@@ -40,9 +41,15 @@ source ~/.zsh/aliases/neighbor.sh
 source ~/.zsh/aliases/docker.sh
 
 function lock() {
+  echo 'creating screenshot...'
   scrot /tmp/screenshot.png
+  echo 'converting...'
   convert /tmp/screenshot.png -blur 0x5 /tmp/screenshotblur.png
+  echo 'locking...'
   i3lock -i /tmp/screenshotblur.png
 }
+
+# enable vi mode
+bindkey -v
 
 export PATH="/Users/wyatt/.local/bin:$PATH"

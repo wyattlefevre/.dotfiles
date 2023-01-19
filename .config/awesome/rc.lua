@@ -268,7 +268,7 @@ globalkeys = gears.table.join(
     end,
     { description = "focus previous by index", group = "client" }
   ),
-  awful.key({ modkey, }, "w", function() mymainmenu:show() end,
+  awful.key({ modkey, "Shift" }, "c", function() mymainmenu:show() end,
     { description = "show main menu", group = "awesome" }),
 
   -- Layout manipulation
@@ -354,7 +354,7 @@ clientkeys = gears.table.join(
       c:raise()
     end,
     { description = "toggle fullscreen", group = "client" }),
-  awful.key({ modkey, "Shift" }, "c", function(c) c:kill() end,
+  awful.key({ modkey, }, "w", function(c) c:kill() end,
     { description = "close", group = "client" }),
   awful.key({ modkey, "Control" }, "space", awful.client.floating.toggle,
     { description = "toggle floating", group = "client" }),
@@ -588,12 +588,14 @@ client.connect_signal("focus", function(c) c.border_color = beautiful.border_foc
 client.connect_signal("unfocus", function(c) c.border_color = beautiful.border_normal end)
 
 if screen.count() == 3 then
-  awful.spawn.easy_async_with_shell("bash /home/wyatt/.screenlayout/work_triple.sh; nitrogen --restore")
+  awful.spawn.easy_async_with_shell("bash /home/wyatt/.screenlayout/work_double.sh; nitrogen --restore")
   awful.spawn.with_shell("compton")
 else
   awful.spawn.with_shell("compton")
   awful.spawn.with_shell("nitrogen --restore")
 end
+
+awful.spawn.with_shell("syncthing --no-browser")
 
 beautiful.useless_gap = 4
 beautiful.gap_single_client = true

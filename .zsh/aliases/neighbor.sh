@@ -2,16 +2,12 @@
 
 # cd shortcuts
 alias cdn='cd ~/neighbor/'
-alias cdc='cd ~/neighbor/config-management/docker'
+alias cdc='cd ~/neighbor/config-management/docker && exec bash'
 alias cdp='cd ~/neighbor/payments'
 alias cdreact='cd ~/neighbor/react-frontend'
 alias cdrails='cd ~/neighbor/rails-api'
 alias cdssr='cd ~/neighbor/ssr-frontend'
 alias cds='cd ~/neighbor/search/'
-function cdcv() {
-  cd ~/neighbor/config-management/docker
-  vaulted shell neighbor
-}
 
 # docker
 alias dra='docker compose run --rm api'
@@ -24,12 +20,10 @@ alias clear-pids='docker compose run --rm api rm /usr/src/app/tmp/pids/server.pi
 alias migrate-db='docker compose run --rm api rails db:migrate RAILS_ENV=development'
 
 # local env
-alias vs='vaulted shell neighbor'
 alias cpenv="cp ~/neighbor/config-management/docker/.env.docker.frontend ~/neighbor/react-frontend/.env"
-alias nacho="cd ~/neighbor/config-management/docker/nacho/ && source ~/.bash_profile && bash nacho"
 
 # aws roles
-alias assume-staging='vaulted shell --assume arn:aws:iam::579388830246:role/NeighborStagingOrganizationRole neighbor'
+# TODO
 
 # goodmorning
 function goodmorning() {
