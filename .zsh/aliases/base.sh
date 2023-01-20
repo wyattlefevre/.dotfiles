@@ -1,5 +1,8 @@
 # TODO: add a goodmorning that hooks into the Neighbor goodmorning
 # TODO: goodmorning script notifies if there are unsaved changes in this repo
+# environment
+export EDITOR=nvim
+
 alias vim='nvim'
 alias lg='lazygit'
 alias ls='ls -a1'
@@ -27,18 +30,11 @@ function cdv() {
   nvim
 }
 
-# macro to kill the docker desktop app and the VM (excluding vmnetd -> it's a service)
-function kdo() {
-  ps ax|grep -i docker|egrep -iv 'grep|com.docker.vmnetd'|awk '{print $1}'|xargs kill
-}
-
-# environment
-export EDITOR=nvim
-
 # sources
 source ~/.zsh/aliases/qmk.sh
 source ~/.zsh/aliases/neighbor.sh
 source ~/.zsh/aliases/docker.sh
+source ~/.zsh/aliases/macbook.sh
 
 function lock() {
   echo 'creating screenshot...'
