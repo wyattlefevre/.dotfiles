@@ -34,7 +34,6 @@ function cdv() {
 source ~/.zsh/aliases/qmk.sh
 source ~/.zsh/aliases/neighbor.sh
 source ~/.zsh/aliases/docker.sh
-source ~/.zsh/aliases/macbook.sh
 
 function lock() {
   echo 'creating screenshot...'
