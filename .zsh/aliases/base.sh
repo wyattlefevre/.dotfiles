@@ -47,11 +47,4 @@ function lock() {
 # enable vi mode
 bindkey -v
 
-# tmux window renaming
-tmux-window-name() {
-  (~/.tmux/plugins/tmux-window-name/scripts/rename_session_windows.py &)
-}
-
-add-zsh-hook chpwd tmux-window-name
-
 export PATH="/Users/wyatt/.local/bin:$PATH"
