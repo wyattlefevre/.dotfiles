@@ -2,7 +2,7 @@
 
 # cd shortcuts
 alias cdn='cd ~/neighbor/'
-alias cdc='cd ~/neighbor/config-management/docker && exec bash'
+alias cdcb='cd ~/neighbor/config-management/docker && exec bash'
 alias cdp='cd ~/neighbor/payments'
 alias cdreact='cd ~/neighbor/react-frontend'
 alias cdrails='cd ~/neighbor/rails-api'

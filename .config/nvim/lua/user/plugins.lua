@@ -49,7 +49,7 @@ return packer.startup(function(use)
   use("windwp/nvim-ts-autotag") -- Autoclose tags
   use("kyazdani42/nvim-web-devicons")
   use("kyazdani42/nvim-tree.lua")
-  use("akinsho/bufferline.nvim")
+  use("akinsho/bufferline.nvim") -- Status Line
   use("moll/vim-bbye")
   use("nvim-lualine/lualine.nvim")
   use("akinsho/toggleterm.nvim")
