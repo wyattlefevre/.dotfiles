@@ -12,12 +12,16 @@ alias cds='cd ~/neighbor/search/'
 # docker
 alias dra='docker compose run --rm api'
 alias rc='docker compose run --rm api rails c'
+alias clear-pids='docker compose run --rm api rm /usr/src/app/tmp/pids/server.pid'
+
+# rails
 alias rails-test='docker compose run --rm api rails test' #docker compose run --rm api rails test <path to file> --name <test name>
 alias rails-rubocop='dra bundle exec rubocop --parallel --format progress --except Layout/LineLength -A'
+alias migrate-db='docker compose run --rm api rails db:migrate RAILS_ENV=development'
+
+# front end
 alias react-test='docker compose run --rm frontend yarn test:unit'
 alias react-test-all='docker compose run --rm frontend yarn test:unit:ci'
-alias clear-pids='docker compose run --rm api rm /usr/src/app/tmp/pids/server.pid'
-alias migrate-db='docker compose run --rm api rails db:migrate RAILS_ENV=development'
 
 # local env
 alias cpenv="cp ~/neighbor/config-management/docker/.env.docker.frontend ~/neighbor/react-frontend/.env"
@@ -26,7 +30,7 @@ alias cpenv="cp ~/neighbor/config-management/docker/.env.docker.frontend ~/neigh
 # TODO
 
 # goodmorning
-function goodmorning() {
+function ngm() {
   echo 'updating config-management'
   cd ~/neighbor/config-management/
   git checkout master
@@ -63,7 +67,5 @@ function goodmorning() {
   git pull
 
   echo 'running brew upgrade'
-  brew upgrade
-
-  cdcv
+  sudo apt upgrade
 }
