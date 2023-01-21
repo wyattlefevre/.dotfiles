@@ -47,4 +47,4 @@ function lock() {
 # enable vi mode
 bindkey -v
 
-export PATH="/Users/wyatt/.local/bin:$PATH"
+export PATH="/home/wyatt/.local/bin:$PATH"

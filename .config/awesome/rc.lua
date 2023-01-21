@@ -588,7 +588,9 @@ client.connect_signal("focus", function(c) c.border_color = beautiful.border_foc
 client.connect_signal("unfocus", function(c) c.border_color = beautiful.border_normal end)
 
 if screen.count() == 3 then
-  awful.spawn.easy_async_with_shell("bash /home/wyatt/.screenlayout/work_double.sh; nitrogen --restore")
+  awful.spawn.easy_async_with_shell("bash /home/wyatt/.screenlayout/work_double.sh", function()
+    awful.spawn.easy_async_with_shell("nitrogen --restore")
+  end)
   awful.spawn.with_shell("compton")
 else
   awful.spawn.with_shell("compton")
@@ -596,6 +598,10 @@ else
 end
 
 awful.spawn.with_shell("syncthing --no-browser")
+awful.spawn.with_shell("flameshot")
+awful.spawn.with_shell("pnmixer")
+awful.spawn.with_shell("nm-applet")
+awful.spawn.with_shell("blueman-applet")
 
 beautiful.useless_gap = 4
 beautiful.gap_single_client = true
