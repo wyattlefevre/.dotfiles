@@ -34,7 +34,6 @@ function cdv() {
 source ~/.zsh/aliases/qmk.sh
 source ~/.zsh/aliases/neighbor.sh
 source ~/.zsh/aliases/docker.sh
-source ~/.zsh/aliases/macbook.sh
 
 function lock() {
   echo 'creating screenshot...'
@@ -47,12 +46,5 @@ function lock() {
 
 # enable vi mode
 bindkey -v
-
-# tmux window renaming
-tmux-window-name() {
-  (~/.tmux/plugins/tmux-window-name/scripts/rename_session_windows.py &)
-}
-
-add-zsh-hook chpwd tmux-window-name
 
 export PATH="/home/wyatt/.local/bin:$PATH"
