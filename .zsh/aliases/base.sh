@@ -55,4 +55,4 @@ tmux-window-name() {
 
 add-zsh-hook chpwd tmux-window-name
 
-export PATH="/Users/wyatt/.local/bin:$PATH"
+export PATH="/home/wyatt/.local/bin:$PATH"

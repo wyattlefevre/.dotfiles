@@ -599,6 +599,9 @@ end
 
 awful.spawn.with_shell("syncthing --no-browser")
 awful.spawn.with_shell("flameshot")
+awful.spawn.with_shell("pnmixer")
+awful.spawn.with_shell("nm-applet")
+awful.spawn.with_shell("blueman-applet")
 
 beautiful.useless_gap = 4
 beautiful.gap_single_client = true
