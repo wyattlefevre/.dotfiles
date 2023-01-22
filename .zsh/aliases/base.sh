@@ -8,8 +8,8 @@ alias back='cd -'
 alias cp="cp -i"
 alias mv='mv -i'
 alias rm='rm -i'
+
 export PATH="/home/wyatt/.local/bin:$PATH"
-export PATH="/home/wyatt/.local/share/flatpak/exports/bin:$PATH"
 
 # ------------------------------------------------------
 # Change cursor shape for different vi modes.
