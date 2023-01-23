@@ -329,7 +329,7 @@ globalkeys = gears.table.join(
     { description = "restore minimized", group = "client" }),
 
   -- Prompt
-  awful.key({ modkey }, "r", function() awful.util.spawn("rofi -show combi -combi-modi \"run,drun\" -modi combi") end,
+  awful.key({ modkey }, "r", function() awful.util.spawn("rofi -show combi -combi-modi \"drun,run\" -modi combi") end,
     { description = "runs rofi drun", group = "launcher" }),
 
   awful.key({ modkey }, "x",
