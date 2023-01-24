@@ -13,6 +13,7 @@ local function setHighlights(bg, c, b)
   --[[ vim.api.nvim_set_hl(0, "DiagnosticHint", { ctermbg = c, bg = b }) ]]
   --[[ vim.api.nvim_set_hl(0, "DiagnosticWarn", { ctermbg = c, bg = b }) ]]
   --[[ vim.api.nvim_set_hl(0, "DiagnosticError", { ctermbg = c, bg = b }) ]]
+  vim.api.nvim_set_hl(0, "Pmenu", { ctermbg = 'none', bg = 'none', ctermfg = 'white', fg = 'white' })
 end
 
 local lightDefaults = { mode = "light", ctermbg = 256, bg = "#e4e4e4" }

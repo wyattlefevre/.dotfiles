@@ -43,6 +43,7 @@ preexec() { echo -ne '\e[5 q' ;} # Use beam shape cursor for each new prompt.
 source ~/.zsh/aliases/neighbor.sh
 source ~/.zsh/aliases/software.sh
 source ~/.zsh/aliases/linux.sh
+source ~/.zsh/aliases/macbook.sh
 
 neofetch
 config status

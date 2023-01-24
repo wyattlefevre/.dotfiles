@@ -7,8 +7,8 @@ configs.setup({
     enable = true,
   },
   highlight = {
-    enable = false, -- false will disable the whole extension
-    disable = { "" }, -- list of language that will be disabled
+    enable = true, -- false will disable the whole extension
+    disable = { "tsx" }, -- list of language that will be disabled
     additional_vim_regex_highlighting = true,
   },
   indent = { enable = true, disable = { "yaml", "ruby", "python", "golang", "c", "html" } },
