@@ -2,7 +2,8 @@
 
 # cd shortcuts
 alias cdn='cd ~/neighbor/'
-alias cdcb='cd ~/neighbor/config-management/docker && exec bash'
+alias cdcb='cd ~/neighbor/config-management/docker && source ~/.bashrc && exec bash'
+alias cdc='cd ~/neighbor/config-management/docker'
 alias cdp='cd ~/neighbor/payments'
 alias cdreact='cd ~/neighbor/react-frontend'
 alias cdrails='cd ~/neighbor/rails-api'
@@ -69,3 +70,5 @@ function ngm() {
   echo 'running brew upgrade'
   sudo apt upgrade
 }
+
+export REPO_ROOT_DIR_ADDRESS=/home/wyatt/neighbor
