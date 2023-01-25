@@ -9,7 +9,7 @@ Set up ssh keys with github, it will make it much easier to push updates later. 
 ```bash
 cd ~/
 git clone --bare git@github.com:wyattlefevre/.dotfiles.git $HOME/.dotfiles
-alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
+alias config='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 config checkout
 ```
 ## Only track files in repo
