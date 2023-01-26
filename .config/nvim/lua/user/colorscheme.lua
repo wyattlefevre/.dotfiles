@@ -1,4 +1,4 @@
-local colorscheme = "tokyonight"
+local colorscheme = "gruvbox"
 
 local function setHighlights(bg, c, b)
   bg = bg or "dark"
@@ -45,7 +45,7 @@ local colors = {
   ["onedarker"] = { name = "onedarker", colors = darkDefaults },
   ["moonfly"] = { name = "moonfly", colors = darkDefaults },
   ["system76"] = { name = "system76", colors = darkDefaults },
-  ["tokyonight"] = { name = "tokyonight-night", colors = darkDefaults },
+  ["tokyonight"] = { name = "tokyonight", colors = darkDefaults },
 }
 
 local function applyColorscheme(nickName)
