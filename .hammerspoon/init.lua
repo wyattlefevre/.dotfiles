@@ -1,11 +1,11 @@
 local appKeys = {
   ["J"] = "alacritty",
   ["K"] = "Google Chrome",
-  [";"] = "Spotify",
-  ["0"] = "Slack",
+  ["L"] = "Spotify",
+  [";"] = "Slack",
   ["8"] = "Obsidian",
   ["9"] = "Notion",
-  ["-"] = "Clickup",
+  ["0"] = "Clickup",
 }
 
 for k, app in pairs(appKeys) do
@@ -14,7 +14,7 @@ for k, app in pairs(appKeys) do
   end)
 end
 
-hs.hotkey.bind({ "cmd" }, "L", function()
+hs.hotkey.bind({ "cmd" }, "-", function()
   local win = hs.window.focusedWindow()
   local uuid = win:screen():getUUID()
   local spaces = hs.spaces.spacesForScreen(uuid)
