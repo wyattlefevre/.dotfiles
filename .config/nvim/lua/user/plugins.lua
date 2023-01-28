@@ -48,13 +48,12 @@ return packer.startup(function(use)
   use("numToStr/Comment.nvim") -- Easily comment things
   use("windwp/nvim-ts-autotag") -- Autoclose tags
   use("kyazdani42/nvim-web-devicons")
-  use("kyazdani42/nvim-tree.lua")
+  use("kyazdani42/nvim-tree.lua") -- File tree
   use("akinsho/bufferline.nvim") -- Status Line
   use("moll/vim-bbye")
   use("nvim-lualine/lualine.nvim")
   use("akinsho/toggleterm.nvim")
   use("smithbm2316/centerpad.nvim")
-  --[[ use("NMAC427/guess-indent.nvim") ]]
   use("psliwka/vim-smoothie")
   use("tpope/vim-surround")
   use("lukas-reineke/indent-blankline.nvim")
@@ -67,7 +66,8 @@ return packer.startup(function(use)
   use("rafi/awesome-vim-colorschemes")
   use("bluz71/vim-moonfly-colors")
   use("folke/tokyonight.nvim")
-
+  use("folke/lsp-colors.nvim")
+  use("nyoom-engineering/oxocarbon.nvim")
 
   -- cmp plugins
   use("hrsh7th/nvim-cmp") -- The completion plugin
