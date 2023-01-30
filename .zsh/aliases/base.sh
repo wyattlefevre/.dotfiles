@@ -2,6 +2,7 @@ alias config='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 
 # cd
 alias cdlc='cd ~/programming_problems/leetcode/'
+alias cdbl='cd ~/projects/blynx/'
 alias back='cd -'
 
 # confirm before overwriting something
