@@ -35,6 +35,9 @@ if command -v tmux &> /dev/null && [ -n "$PS1" ] && [[ ! "$TERM" =~ screen ]] &&
   exec tmux
 fi
 
+# golang
+export PATH=$PATH:/usr/local/go/bin
+
 # -------------------
 # docker
 # -------------------
