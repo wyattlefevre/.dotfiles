@@ -29,6 +29,7 @@ alias cpenv="cp ~/neighbor/config-management/docker/.env.docker.frontend ~/neigh
 
 # aws roles
 # TODO
+alias vs="vaulted shell neighbor"
 
 # goodmorning
 function ngm() {
@@ -71,4 +72,4 @@ function ngm() {
   sudo apt upgrade
 }
 
-export REPO_ROOT_DIR_ADDRESS=/home/wyatt/neighbor
+export REPO_ROOT_DIR_ADDRESS=~/neighbor
