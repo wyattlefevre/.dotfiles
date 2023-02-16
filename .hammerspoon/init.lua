@@ -14,9 +14,9 @@ for k, app in pairs(appKeys) do
   end)
 end
 
-hs.hotkey.bind({ "cmd" }, "-", function()
-  local win = hs.window.focusedWindow()
-  local uuid = win:screen():getUUID()
-  local spaces = hs.spaces.spacesForScreen(uuid)
-  hs.spaces.gotoSpace(spaces[2])
-end)
+--[[ hs.hotkey.bind({ "cmd" }, "-", function() ]]
+--[[   local win = hs.window.focusedWindow() ]]
+--[[   local uuid = win:screen():getUUID() ]]
+--[[   local spaces = hs.spaces.spacesForScreen(uuid) ]]
+--[[   hs.spaces.gotoSpace(spaces[2]) ]]
+--[[ end) ]]

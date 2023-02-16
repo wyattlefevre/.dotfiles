@@ -12,7 +12,9 @@ alias cds='cd ~/neighbor/search/'
 
 # docker
 alias dra='docker compose run --rm api'
-alias rc='docker compose run --rm api rails c'
+alias rc='cd ~/neighbor/config-management/docker/ && docker compose run --rm api rails c'
+alias rcs="cd ~/neighbor/rails-api/ && ./eks-exec -c 'rails c' -a -e staging"
+alias rcprod="cd ~/neighbor/rails-api/ && ./eks-exec -c 'rails c' -a -e production"
 alias clear-pids='docker compose run --rm api rm /usr/src/app/tmp/pids/server.pid'
 
 # rails

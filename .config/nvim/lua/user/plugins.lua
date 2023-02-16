@@ -59,11 +59,12 @@ return packer.startup(function(use)
   use("lukas-reineke/indent-blankline.nvim")
 
   -- Colorschemes
-  use("lunarvim/colorschemes") -- A bunch of colorschemes you can try out
+  --[[ use("lunarvim/colorschemes") -- A bunch of colorschemes you can try out ]]
   use("morhetz/gruvbox")
-  use("joshdick/onedark.vim")
+  --[[ use("joshdick/onedark.vim") ]]
   use("lunarvim/darkplus.nvim")
-  use("rafi/awesome-vim-colorschemes")
+  --[[ use("rafi/awesome-vim-colorschemes") ]]
+  use("navarasu/onedark.nvim")
   use("bluz71/vim-moonfly-colors")
   use("folke/tokyonight.nvim")
   use("folke/lsp-colors.nvim")
