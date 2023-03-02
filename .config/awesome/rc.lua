@@ -182,6 +182,7 @@ end
 -- Re-set wallpaper when a screen's geometry changes (e.g. different resolution)
 screen.connect_signal("property::geometry", set_wallpaper)
 
+local batteryarc_widget = require("awesome-wm-widgets.batteryarc-widget.batteryarc")
 awful.screen.connect_for_each_screen(function(s)
   -- Wallpaper
   set_wallpaper(s)
@@ -231,6 +232,7 @@ awful.screen.connect_for_each_screen(function(s)
       mykeyboardlayout,
       wibox.widget.systray(),
       mytextclock,
+      batteryarc_widget(),
       s.mylayoutbox,
     },
   }
@@ -587,24 +589,10 @@ end)
 client.connect_signal("focus", function(c) c.border_color = beautiful.border_focus end)
 client.connect_signal("unfocus", function(c) c.border_color = beautiful.border_normal end)
 
---[[ if screen.count() == 3 then ]]
---[[   awful.spawn.easy_async_with_shell("bash /home/wyatt/.screenlayout/work_double.sh", function() ]]
---[[     awful.spawn.easy_async_with_shell("nitrogen --restore") ]]
---[[   end) ]]
---[[   awful.spawn.with_shell("compton") ]]
---[[ else ]]
---[[   awful.spawn.with_shell("compton") ]]
---[[   awful.spawn.with_shell("nitrogen --restore") ]]
---[[ end ]]
+awful.spawn.with_shell("~/.config/awesome/autorun.sh"
 
-awful.spawn.with_shell("compton")
-awful.spawn.with_shell("nitrogen --restore")
-awful.spawn.with_shell("syncthing --no-browser")
-awful.spawn.with_shell("flameshot")
-awful.spawn.with_shell("pnmixer")
-awful.spawn.with_shell("nm-applet")
-awful.spawn.with_shell("blueman-applet")
-
-beautiful.useless_gap = 4
+beautiful.useless_gap = 2
 beautiful.gap_single_client = true
 awful.screen.set_auto_dpi_enabled(true)
+
+
