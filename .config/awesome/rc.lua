@@ -37,7 +37,7 @@ do
   awesome.connect_signal("debug::error", function(err)
     -- Make sure we don't go into an endless error loop
     if in_error then return end
-    in_error = true
+
 
     naughty.notify({ preset = naughty.config.presets.critical,
       title = "Oops, an error happened!",
@@ -589,7 +589,8 @@ end)
 client.connect_signal("focus", function(c) c.border_color = beautiful.border_focus end)
 client.connect_signal("unfocus", function(c) c.border_color = beautiful.border_normal end)
 
-awful.spawn.with_shell("~/.config/awesome/autorun.sh")
+awful.spawn.with_shell("bash ~/.config/awesome/autorun.sh")
+awful.spawn.with_shell("nitrogen --restore")
 
 beautiful.useless_gap = 2
 beautiful.gap_single_client = true
